@@ -1,0 +1,340 @@
+{
+  "v_manger_001": {
+    "en": "to eat",
+    "lvl": "A1",
+    "present": {
+      "je": "mange",
+      "tu": "manges",
+      "il": "mange",
+      "nous": "mangeons",
+      "vous": "mangez",
+      "ils": "mangent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "mangé"
+    }
+  },
+  
+  "v_etre_001": {
+    "en": "to be",
+    "lvl": "A0",
+    "present": {
+      "je": "suis",
+      "tu": "es",
+      "il": "est",
+      "nous": "sommes",
+      "vous": "êtes",
+      "ils": "sont"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "été"
+    }
+  },
+  "v_avoir_001": {
+    "en": "to have",
+    "lvl": "A0",
+    "present": {
+      "je": "ai",
+      "tu": "as",
+      "il": "a",
+      "nous": "avons",
+      "vous": "avez",
+      "ils": "ont"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "eu"
+    }
+  },
+  "v_aller_001": {
+    "en": "to go",
+    "lvl": "A1",
+    "present": {
+      "je": "vais",
+      "tu": "vas",
+      "il": "va",
+      "nous": "allons",
+      "vous": "allez",
+      "ils": "vont"
+    },
+    "passe_compose": {
+      "auxiliary": "être",
+      "past_participle": "allé"
+    }
+  },
+  "v_faire_001": {
+    "en": "to do/make",
+    "lvl": "A1",
+    "present": {
+      "je": "fais",
+      "tu": "fais",
+      "il": "fait",
+      "nous": "faisons",
+      "vous": "faites",
+      "ils": "font"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "fait"
+    }
+  },
+  "v_parler_001": {
+    "en": "to speak",
+    "lvl": "A1",
+    "present": {
+      "je": "parle",
+      "tu": "parles",
+      "il": "parle",
+      "nous": "parlons",
+      "vous": "parlez",
+      "ils": "parlent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "parlé"
+    }
+  },
+  "v_finir_001": {
+    "en": "to finish",
+    "lvl": "A1",
+    "present": {
+      "je": "finis",
+      "tu": "finis",
+      "il": "finit",
+      "nous": "finissons",
+      "vous": "finissez",
+      "ils": "finissent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "fini"
+    }
+  },
+  "v_prendre_001": {
+    "en": "to take",
+    "lvl": "A2",
+    "present": {
+      "je": "prends",
+      "tu": "prends",
+      "il": "prend",
+      "nous": "prenons",
+      "vous": "prenez",
+      "ils": "prennent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "pris"
+    }
+  },
+  "v_vouloir_001": {
+    "en": "to want",
+    "lvl": "A2",
+    "present": {
+      "je": "veux",
+      "tu": "veux",
+      "il": "veut",
+      "nous": "voulons",
+      "vous": "voulez",
+      "ils": "veulent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "voulu"
+    }
+  },
+  "v_pouvoir_001": {
+    "en": "to be able to",
+    "lvl": "A2",
+    "present": {
+      "je": "peux",
+      "tu": "peux",
+      "il": "peut",
+      "nous": "pouvons",
+      "vous": "pouvez",
+      "ils": "peuvent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "pu"
+    }
+  },
+  "v_voir_001": {
+    "en": "to see",
+    "lvl": "A2",
+    "present": {
+      "je": "vois",
+      "tu": "vois",
+      "il": "voit",
+      "nous": "voyons",
+      "vous": "voyez",
+      "ils": "voient"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "vu"
+    }
+  },
+  "v_devoir_001": {
+    "en": "must/to have to",
+    "lvl": "B1",
+    "present": {
+      "je": "dois",
+      "tu": "dois",
+      "il": "doit",
+      "nous": "devons",
+      "vous": "devez",
+      "ils": "doivent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "dû"
+    }
+  },
+  "v_savoir_001": {
+    "en": "to know (facts)",
+    "lvl": "B1",
+    "present": {
+      "je": "sais",
+      "tu": "sais",
+      "il": "sait",
+      "nous": "savons",
+      "vous": "savez",
+      "ils": "savent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "su"
+    }
+  },
+  "v_venir_001": {
+    "en": "to come",
+    "lvl": "B1",
+    "present": {
+      "je": "viens",
+      "tu": "viens",
+      "il": "vient",
+      "nous": "venons",
+      "vous": "venez",
+      "ils": "viennent"
+    },
+    "passe_compose": {
+      "auxiliary": "être",
+      "past_participle": "venu"
+    }
+  },
+  "v_attendre_001": {
+    "en": "to wait",
+    "lvl": "B1",
+    "present": {
+      "je": "attends",
+      "tu": "attends",
+      "il": "attend",
+      "nous": "attendons",
+      "vous": "attendez",
+      "ils": "attendent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "attendu"
+    }
+  },
+  "v_croire_001": {
+    "en": "to believe",
+    "lvl": "B2",
+    "present": {
+      "je": "crois",
+      "tu": "crois",
+      "il": "croit",
+      "nous": "croyons",
+      "vous": "croyez",
+      "ils": "croient"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "cru"
+    }
+  },
+  "v_connaitre_001": {
+    "en": "to know (familiarity)",
+    "lvl": "B2",
+    "present": {
+      "je": "connais",
+      "tu": "connais",
+      "il": "connaît",
+      "nous": "connaissons",
+      "vous": "connaissez",
+      "ils": "connaissent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "connu"
+    }
+  },
+  "v_recevoir_001": {
+    "en": "to receive",
+    "lvl": "B2",
+    "present": {
+      "je": "reçois",
+      "tu": "reçois",
+      "il": "reçoit",
+      "nous": "recevons",
+      "vous": "recevez",
+      "ils": "reçoivent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "reçu"
+    }
+  },
+  "v_permettre_001": {
+    "en": "to allow",
+    "lvl": "C+",
+    "present": {
+      "je": "permets",
+      "tu": "permets",
+      "il": "permet",
+      "nous": "permettons",
+      "vous": "permettez",
+      "ils": "permettent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "permis"
+    }
+  },
+  "v_atteindre_001": {
+    "en": "to reach/attain",
+    "lvl": "C+",
+    "present": {
+      "je": "atteins",
+      "tu": "atteins",
+      "il": "atteint",
+      "nous": "atteignons",
+      "vous": "atteignez",
+      "ils": "atteignent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "atteint"
+    }
+  },
+  "v_craindre_001": {
+    "en": "to fear",
+    "lvl": "C+",
+    "present": {
+      "je": "crains",
+      "tu": "crains",
+      "il": "craint",
+      "nous": "craignons",
+      "vous": "craignez",
+      "ils": "craignent"
+    },
+    "passe_compose": {
+      "auxiliary": "avoir",
+      "past_participle": "craint"
+    }
+  }
+
+}

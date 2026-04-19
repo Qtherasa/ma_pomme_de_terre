@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ma Pomme de Terre</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Ma Pomme de Terre</h1>
+            <nav id="module-nav">
+                <button onclick="window.location.hash = 'vocab'">Vocabulary</button>
+                <button onclick="window.location.hash = 'flashcards'">Flashcards</button>
+            </nav>
+            <section id="filters">
+                <label>Level:
+                    <select id="lvl-select">
+                        <option value="all">All</option>
+                        <option value="A0">Intro</option>
+                        <option value="A1">Foundation</option>
+                        <option value="A2">Growing</option>
+                        <option value="B1">Independent</option>
+                        <option value="B2">Confident</option>
+                        <option value="C+">Fluent</option>
+                    </select>
+                </label>
+                <label>Category:
+                    <select id="cat-select">
+                        <option value="all">All</option>
+                        <option value="animals">Animals</option>
+                        <option value="places">Places</option>
+                        <option value="abstract">Abstract</option>
+                    </select>
+                </label>
+            </section>
+        </header>
+        <main id="app">
+            <div id="loading">Chargement...</div>
+        </main>
+        <script type="module" src="app.js"></script>
+    </body>
+</html>
