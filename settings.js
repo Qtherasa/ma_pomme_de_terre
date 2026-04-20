@@ -4,7 +4,8 @@ const DEFAULT_SETTINGS = {
     category: 'all',
     speechRate: 0.8,
     theme: 'light',
-    dialect: 'fr-FR'
+    dialect: 'fr-FR',
+    showGenderColor: false
 };
 
 // 2. State (Initialized from LocalStorage or Defaults)

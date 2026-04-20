@@ -118,7 +118,8 @@
     "type": "noun",
     "emoji": "📚",
     "lvl": "A2",
-    "unit": 4
+    "unit": 4,
+    "note": "Où est la bibliothèque ?"
   },
   {
     "id": "n_foret_001",
@@ -389,5 +390,20 @@
     "emoji": "📦",
     "lvl": "B2",
     "unit": 14
+  },
+  {
+  "id": "n_chat_001",
+  "fr": "chat",
+  "gender": "m",
+  "articles": { "indef": "un", "def": "le", "pl_indef": "des", "pl_def": "les" },
+  "pl": "chats",
+  "en": "cat",
+  "ph": "shah",
+  "category": "animals",
+  "subcategory": "pets",
+  "type": "noun",
+  "emoji": "🐱",
+  "lvl": "A0",
+  "note": "In Québec, you might hear 'minou' as a cute nickname for a cat."
   }
 ]
