@@ -4882,19 +4882,7 @@
     "lvl": "B2",
     "unit": 1
   },
-  {
-    "id": "adv_beaucoup_001",
-    "fr": "beaucoup",
-    "articles": null,
-    "en": "a lot / much",
-    "ph": "boh-KOO",
-    "category": "descriptions",
-    "subcategory": "degree",
-    "type": "adverb",
-    "emoji": "🙆",
-    "lvl": "A1",
-    "unit": 1
-  },
+  
   {
     "id": "adv_tres_001",
     "fr": "très",
