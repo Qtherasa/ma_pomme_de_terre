@@ -4886,19 +4886,6 @@
  
   
   {
-    "id": "adv_vraiment_001",
-    "fr": "vraiment",
-    "articles": null,
-    "en": "really / truly",
-    "ph": "vray-MAHN",
-    "category": "descriptions",
-    "subcategory": "degree",
-    "type": "adverb",
-    "emoji": "🙂‍↕️",
-    "lvl": "A2",
-    "unit": 1
-  },
-  {
     "id": "adj_grand_001",
     "fr": "grand",
     "gender": "m",
