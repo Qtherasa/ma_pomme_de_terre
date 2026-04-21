@@ -4782,20 +4782,7 @@
     "lvl": "A2",
     "unit": 1
   },
-  {
-    "id": "adj_beau_001",
-    "fr": "beau",
-    "gender": "m",
-    "articles": null,
-    "en": "beautiful / handsome",
-    "ph": "boh",
-    "category": "descriptions",
-    "subcategory": "appearance",
-    "type": "adjective",
-    "emoji": "😍",
-    "lvl": "A1",
-    "unit": 1
-  },
+  
   {
     "id": "adj_laid_001",
     "fr": "laid",
