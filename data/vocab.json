@@ -843,32 +843,7 @@
     "lvl": "A1",
     "unit": 1
   },
-  {
-    "id": "adj_grand_001",
-    "fr": "grand",
-    "speech_alt": "grand",
-    "en": "big / tall",
-    "ph": "grahn",
-    "category": "adding_detail",
-    "subcategory": "description",
-    "type": "adjective",
-    "emoji": "🐘",
-    "lvl": "A1",
-    "unit": 1
-  },
-  {
-    "id": "adj_petit_001",
-    "fr": "petit",
-    "speech_alt": "petit",
-    "en": "small / short",
-    "ph": "puh-TEE",
-    "category": "adding_detail",
-    "subcategory": "description",
-    "type": "adjective",
-    "emoji": "🐜",
-    "lvl": "A1",
-    "unit": 1
-  },
+  
   {
     "id": "adj_magnifique_001",
     "fr": "magnifique",
