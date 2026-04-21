@@ -5084,34 +5084,8 @@
     "lvl": "A2",
     "unit": 1
   },
-  {
-    "id": "adj_incroyable_001",
-    "fr": "incroyable",
-    "gender": "m/f",
-    "articles": null,
-    "en": "incredible",
-    "ph": "an-krwah-YAH-bluh",
-    "category": "descriptions",
-    "subcategory": "quality",
-    "type": "adjective",
-    "emoji": "🤩",
-    "lvl": "B1",
-    "unit": 1
-  },
-  {
-    "id": "adj_epoustouflant_001",
-    "fr": "époustouflant",
-    "gender": "m",
-    "articles": null,
-    "en": "breathtaking",
-    "ph": "ay-poos-too-FLAHN",
-    "category": "descriptions",
-    "subcategory": "quality",
-    "type": "adjective",
-    "emoji": "😲",
-    "lvl": "C1",
-    "unit": 1
-  },
+  
+  
 
 
 
@@ -6171,21 +6145,7 @@
     "lvl": "A1",
     "unit": 1
   },
-  {
-    "id": "n_poisson_001",
-    "fr": "poisson",
-    "gender": "m",
-    "articles": { "indef": "un", "def": "le", "pl_indef": "des", "pl_def": "les" },
-    "pl": "poissons",
-    "en": "fish",
-    "ph": "pwah-SOHN",
-    "category": "food",
-    "subcategory": "proteins",
-    "type": "noun",
-    "emoji": "🐟",
-    "lvl": "A1",
-    "unit": 1
-  },
+ 
   {
     "id": "n_poulet_001",
     "fr": "poulet",
@@ -12283,22 +12243,7 @@
 
 
 
-  {
-    "id": "n_ecole_001",
-    "fr": "école",
-    "speech_alt": "école",
-    "gender": "f",
-    "articles": { "indef": "un", "def": "l'", "pl_indef": "des", "pl_def": "les" },
-    "pl": "écoles",
-    "en": "school",
-    "ph": "ay-kohl",
-    "category": "places",
-    "subcategory": "buildings",
-    "type": "noun",
-    "emoji": "🏫",
-    "lvl": "A0",
-    "unit": 1
-    },
+ 
   
  
   {
