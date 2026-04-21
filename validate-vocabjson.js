@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const vocabPath = path.join(__dirname, 'data/vocabulary.json');
+const vocabPath = path.join(__dirname, 'data/vocab.json');
 
 try {
   const data = JSON.parse(fs.readFileSync(vocabPath, 'utf8'));
