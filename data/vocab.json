@@ -4883,19 +4883,7 @@
     "unit": 1
   },
   
-  {
-    "id": "adv_tres_001",
-    "fr": "très",
-    "articles": null,
-    "en": "very",
-    "ph": "tray",
-    "category": "descriptions",
-    "subcategory": "degree",
-    "type": "adverb",
-    "emoji": "👍",
-    "lvl": "A1",
-    "unit": 1
-  },
+ 
   {
     "id": "adv_assez_001",
     "fr": "assez",
