@@ -4797,20 +4797,7 @@
     "lvl": "A2",
     "unit": 1
   },
-  {
-    "id": "adj_mignon_001",
-    "fr": "mignon",
-    "gender": "m",
-    "articles": null,
-    "en": "cute",
-    "ph": "mee-NYOHN",
-    "category": "descriptions",
-    "subcategory": "appearance",
-    "type": "adjective",
-    "emoji": "🥰",
-    "lvl": "A2",
-    "unit": 1
-  },
+  
   {
     "id": "adj_gentil_001",
     "fr": "gentil",
