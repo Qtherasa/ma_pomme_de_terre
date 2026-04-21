@@ -4884,19 +4884,7 @@
   },
   
  
-  {
-    "id": "adv_assez_001",
-    "fr": "assez",
-    "articles": null,
-    "en": "enough / quite",
-    "ph": "ah-SAY",
-    "category": "descriptions",
-    "subcategory": "degree",
-    "type": "adverb",
-    "emoji": "👌",
-    "lvl": "A2",
-    "unit": 1
-  },
+  
   {
     "id": "adv_vraiment_001",
     "fr": "vraiment",
