@@ -9,35 +9,30 @@
     <body>
         <header>
             <h1>Ma Pomme de Terre</h1>
-            <!-- <nav id="module-nav">
-                <button onclick="window.location.hash = 'vocab'">Vocabulary</button>
-                <button onclick="window.location.hash = 'flashcards'">Flashcards</button>
-            </nav>  -->
             <button id="tray-toggle">⚙️ Settings & Nav</button>
-            <div id="filter-tray" class="tray-open">
-                <section id="filters">
-                    <label>Level:
-                        <select id="lvl-select">
-                            <option value="all">All</option>
-                            <option value="A0">Intro</option>
-                            <option value="A1">Foundation</option>
-                            <option value="A2">Growing</option>
-                            <option value="B1">Independent</option>
-                            <option value="B2">Confident</option>
-                            <option value="C+">Fluent</option>
-                        </select>
-                    </label>
-                    <label>Category:
-                        <select id="cat-select">
-                            <option value="all">All</option>
-                            <option value="animals">Animals</option>
-                            <option value="places">Places</option>
-                            <option value="abstract">Abstract</option>
-                        </select>
+            <div id="filter-tray">
+                <div id="tray-tabs">
+                    <button class="tab-btn active" data-tab="tab-level">Level</button>
+                    <button class="tab-btn" data-tab="tab-category">Category</button>
+                    <button class="tab-btn" data-tab="tab-topic">Topic</button>
+                </div>              
+                <section id="tab-level" class="tab-content active">
+                    <div id="level-list" class="action-list">        
+                    </div>
+                    <hr>
+                    <label class="toggle-container">
+                        <input type="checkbox" id="level-inclusive-toggle">
+                        Include prior levels
                     </label>
                 </section>
-                <div id="jump-nav-container">           
-                </div>
+                <section id="tab-category" class="tab-content">
+                    <div id="category-list" class="action-list">        
+                    </div>
+                </section>
+                <section id="tab-topic" class="tab-content">
+                    <div id="jump-nav-container" class="action-list">        
+                    </div>
+                </section>
             </div>
         </header>
         <main id="app">

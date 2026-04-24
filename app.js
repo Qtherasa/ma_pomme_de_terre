@@ -1,6 +1,15 @@
 import { initSettings, updateSetting, getSettings } from "./settings.js";
-import { setPrimaryData, getFilteredData } from "./dataManager.js";
+import { setPrimaryData, getFilteredData, getDataFilteredByLevel, getAllData } from "./dataManager.js";
 import { renderVocabCard } from "./modules/vocabCard.js";
+
+const levelAliases = {
+    'A0': 'Intro',
+    'A1': 'Foundation',
+    'A2': 'Growing',
+    'B1': 'Independent',
+    'B2': 'Confident',
+    'C+': 'Fluent'
+};
 
 // Global State
 let vocabData = [];
@@ -8,12 +17,18 @@ let vocabData = [];
 // Global variable to hold our preferred voice
 let frenchFemaleVoice = null;
 
+window.handleUpdateSetting = (key, value) => {
+    updateSetting(key, value);
+};
+
 // 1. Fetch the Data
 async function init() {
     const settings = initSettings();
     //tray logic
     const tray = document.getElementById('filter-tray');
     const toggleBtn = document.getElementById('tray-toggle');
+    
+    
     let lastScrollTop = 0;
     let isTrayManuallyOpened = false;
     toggleBtn.addEventListener('click', () => {
@@ -46,20 +61,39 @@ async function init() {
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
     }, { passive: true });
 
-    // UI Sync
-    document.getElementById('lvl-select').value = settings.lvl;
-    document.getElementById('cat-select').value = settings.category;
+    // Tab Switching Logic
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
 
-    // Listener
-    document.querySelector('#filters').addEventListener('change',(e) => {
-        if (e.target.id === 'lvl-select') updateSetting('lvl', e.target.value);
-        if (e.target.id === 'cat-select') updateSetting('category', e.target.value);
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            tab.classList.add('active');
+            const targetId = tab.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetId);
+            
+            if (targetContent) {
+                targetContent.classList.add('active');
+                targetContent.scrollTop = 0; // NEW: Snaps tab content back to top
+            }
+        });
     });
 
+    // Inclusive Level Toggle Listener
+    document.getElementById('level-inclusive-toggle').addEventListener('change', (e) => {
+        updateSetting('inclusiveLevel', e.target.checked);
+    });
+
+    
     // Listen for the custom event to re-render the UI
     window.addEventListener('settingsChanged',() => {
+        console.log("Settings updated, re-rendering...");
         renderApp();
     });
+
+
 
     try {
         const response = await fetch('./data/vocab.json');
@@ -179,10 +213,89 @@ function renderVocabList(data) {
 
 
 // pull the list of vocab
-function renderApp(){
+function renderApp() {
     const filtered = getFilteredData();
+    const allData = getAllData(); // Make sure this is exported from dataManager.js
+    const settings = getSettings();
+
+// 1. Levels (Using Friendly Aliases)
+    const levels = ['all', 'A0', 'A1', 'A2', 'B1', 'B2', 'C+'];
+    const levelList = document.getElementById('level-list');
+    if (levelList) {
+        levelList.innerHTML = levels.map(l => `
+            <div class="list-item ${settings.lvl === l ? 'selected' : ''}" 
+                 onclick="handleUpdateSetting('lvl', '${l}')">
+                 ${levelAliases[l] || (l === 'all' ? 'All' : l)}
+            </div>
+        `).join('');
+    }
+
+    // 2. Categories (Reactive Counts)
+    const catList = document.getElementById('category-list');
+    if (catList) {
+        // Get data that is ONLY filtered by the current level selection
+        const dataByLevel = getDataFilteredByLevel(); 
+        const allData = getAllData();
+        
+        // Get unique categories from the total dataset (so the buttons don't disappear)
+        const categories = [...new Set(allData.map(item => item.category))];
+        
+        // Total count for the "All" bubble based on current level
+        let catHtml = `<div class="list-item ${settings.category === 'all' ? 'selected' : ''}" 
+                            onclick="handleUpdateSetting('category', 'all')">
+                            All <span>(${dataByLevel.length})</span>
+                    </div>`;
+        
+        catHtml += categories.map(cat => {
+            // Count items in this category that also match the current level
+            const count = dataByLevel.filter(i => i.category === cat).length;
+            
+            // Use a class to dim categories with 0 results for the current level
+            const isEmpty = count === 0 ? 'is-empty' : '';
+            
+            return `
+                <div class="list-item ${settings.category === cat ? 'selected' : ''} ${isEmpty}" 
+                    onclick="handleUpdateSetting('category', '${cat}')">
+                    ${cat.charAt(0).toUpperCase() + cat.slice(1)} <span>(${count})</span>
+                </div>
+            `;
+        }).join('');
+        catList.innerHTML = catHtml;
+    }
+
+    // 3. Topics (Jump Links)
+    const topicContainer = document.getElementById('jump-nav-container');
+    if (topicContainer) {
+        const categories = [...new Set(filtered.map(i => i.category))];
+        
+        topicContainer.innerHTML = categories.map(cat => {
+            const subs = [...new Set(filtered.filter(i => i.category === cat).map(i => i.subcategory))];
+            return `
+                <div class="topic-group" style="width: 100%; margin-bottom: 15px;">
+                    <div style="font-size: 0.7rem; font-weight: bold; color: #999; text-transform: uppercase; margin-bottom: 5px; width: 100%;">
+                        ${cat}
+                    </div>
+                    <div class="action-list">
+                        ${subs.map(sub => `
+                            <a href="#jump-${sub}" class="list-item" onclick="document.getElementById('filter-tray').classList.remove('tray-open')">
+                                ${sub}
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // 4. CRITICAL: Re-render the main list with filtered data
     renderVocabList(filtered);
+
+    // Fill the tray UI (Level, Categories, Topics)
+    //updateTrayUI(filtered, allData);
+    
+    
 }
+
 
 
 init();

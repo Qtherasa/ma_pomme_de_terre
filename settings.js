@@ -12,7 +12,7 @@ const DEFAULT_SETTINGS = {
 let currentSettings = { ...DEFAULT_SETTINGS };
 
 export function initSettings() {
-    const saved = localStorage.getItem('frenchApp_settings');
+    const saved = localStorage.getItem('vocabSettings');
     if (saved) {
         currentSettings = { ...DEFAULT_SETTINGS, ...JSON.parse(saved)}
     }
@@ -20,8 +20,9 @@ export function initSettings() {
 }
 
 export function updateSetting(key, value) {
+    const settings = getSettings();
     currentSettings[key] = value;
-    localStorage.setItem('frenchApp_settings', JSON.stringify(currentSettings));
+    localStorage.setItem('vocabSettings', JSON.stringify(currentSettings));
     // dispatch a custom event so other parts of app know the settings changed without a full refresh
     window.dispatchEvent(new CustomEvent('settingsChanged', {detail: currentSettings }));
 }

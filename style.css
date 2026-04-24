@@ -81,7 +81,7 @@ button {
     color: #bdc3c7;
 }
 .category-header,subcategory-header {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 220px;
 }
 .category-header {
     width: 100%;
@@ -198,25 +198,125 @@ button {
 }
 
 #filter-tray{
+display: flex;
+    flex-direction: column;
     max-height: 0;
     width: 100%;
-    overflow-y: auto;
     transition: max-height 0.3s ease-in-out, opacity 0.2s ease;
     background: #eef2f1;
     border-radius: 0 0 12px 12px;
     opacity: 0;
     pointer-events: none;
-    margin-top:0;
+    overflow: hidden; /* Prevent content leaking when closed */
 }
 
 #filter-tray.tray-open {
     max-height: 70vh;
     opacity: 1;
     pointer-events: auto;
-    padding: 15px 0;
-    border-bottom : 2px solid #3498db;
+    border-bottom: 2px solid #3498db;
     box-shadow: 0 10px 15px -5px rgba(0,0,0,0.1);
 }
+
+#tray-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #dde4e2;
+    flex-shrink: 0; /* Prevents tabs from squishing */
+}
+
+.tab-btn{
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #666;
+    padding: 10px;
+}
+
+.tab-content {
+    display: none; 
+    padding: 20px;
+    overflow-y: auto; /* Allows only the list content to scroll */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.action-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 5px 0;
+}
+
+.list-item{
+    padding: 10px 18px;
+    white-space: nowrap;
+    min-width: 80px;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    user-select: none;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+.list-item.selected{
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.list-item:hover {
+    background: #3498db;
+    border-color: #f0f7ff;
+}
+
+.list-item span{
+    font-size: 0.75rem;
+    margin-left: 6px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.list-item.is-empty {
+    opacity: 0.5;
+    border-style:dotted;
+    pointer-events: auto;
+}
+
+.list-item.is-empty:hover {
+    opacity: 0.8;
+}
+
+#level-list, #category-list, #jump-nav-container {
+    padding: 10px 0;
+    max-height: none; 
+}
+
+.toggle-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+
 
 .jump-nav a{
     text-decoration: none;
@@ -230,5 +330,16 @@ button {
 .jump-nav div{
     margin-bottom: 8px;
 }
+
+#jump-nav-container .list-item {
+    background: #fdfdfd;
+    color: #3498db;
+    border: 1px dashed #3498db;
+}
+
+#jump-nav-container .list-item:hover {
+    background: #ebf5fb;
+}
+
 .gender-m.active { border-left: 8px solid #3498db;}
 .gender-f.active { border-left: 8px solid #e74c3c;}
